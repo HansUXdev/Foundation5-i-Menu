@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Foundation 5 with icon bar</title>
+      <link rel="stylesheet" href="/css/foundation.css"/>
+      <script src="/js/vendor/modernizr.js"></script>
+   </head>
+
+   <body>
+      <!--  -->
+      <nav class="top-bar" data-topbar>
+         <ul class="title-area">
+            <li class="name">
+               <h1><a href="#">Test Site</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon">
+            	<a href="#">
+            		<span></span>
+            	</a>
+            </li>
+         </ul>
+         <section class="top-bar-section">
+            <ul class="center">
+               <li><a href="index.html">Home</a></li>
+            </ul>
+         </section>
+      </nav>
+      <!--  -->
+
+
+
+
+      <!-- 
+      <footer class="row">
+         <div class="large-12 columns">
+            <hr>
+            <div class="row">
+               <div class="large-6 columns">
+                  <p>© Copyright no one at all. Go to town.</p>
+               </div>
+               <div class="large-6 columns">
+                  <ul class="inline-list right">
+                     <li>
+                        <a href="#">Link 1</a>
+                     </li>
+                     <li>
+                        <a href="#">Link 2</a>
+                     </li>
+                     <li>
+                        <a href="#">Link 3</a>
+                     </li>
+                     <li>
+                        <a href="#">Link 4</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+       -->
+      <!--  -->
+      <script src="/js/vendor/jquery.js"></script>
+      <script src="/js/foundation.js"></script>
+      <script>
+         $(document).foundation();
+         
+         var doc = document.documentElement;
+         doc.setAttribute('data-useragent', navigator.userAgent);
+
+         // Activate menu-icon
+		   $("#border-menu").click(function(e) {
+		      e.preventDefault();
+		      $("#border-menu").toggleClass("border-menu-open");
+		   });
+      </script>
+
+   </body>
+</html>
