@@ -45,3 +45,127 @@
   @import "foundation/components/type";
   @import "foundation/components/offcanvas";
   @import "foundation/components/visibility";
+
+
+
+// 
+.tab-bar .right-off-canvas-toggle{
+      &.i-menu {   
+        text-indent: 2.1875rem;
+        width: 1.8125rem;
+        height: 2.8125rem;
+        display: block;
+        padding: 0;
+        color: #FFFFFF;
+        transform: translate3d(0, 0, 0);      
+        position: relative;
+        left: 12px;
+          // top: 50%;
+          // margin-top: -16px;
+              // height: 34px;
+              // line-height: 33px;
+              // // padding: 0 $topbar-link-padding+rem-calc(25) 0 $topbar-link-padding;
+              // color: $topbar-menu-link-color;
+              // position: relative;        
+        span{
+          position: absolute;
+          top: 50%;
+          right: 0.3rem;
+          display: block;
+          width: 100%;
+          height: 4px;
+          margin-top: -2px;
+          background-color: #fff;
+          font-size: 0px;
+          -webkit-touch-callout: none;
+          -khtml-user-select: none;
+          user-select: none;
+          transition: background-color 0.3s;
+        }
+        // 
+        span:before,
+        span:after{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          content: '';
+          transition: transform 0.3s;
+        }
+        // Position icons horizontally
+        span:before { transform: translateY(-250%); }
+        span:after  { 
+          // Fix conflict with old hamburger-menu (line 328)
+          box-shadow: none !important; // I dare you remove this
+          transform: translateY(250%);  
+        }
+
+      }
+    }
+.tab-bar .left-off-canvas-toggle{
+      &.i-menu {   
+        text-indent: 2.1875rem;
+        width: 1.8125rem;
+        height: 2.8125rem;
+        display: block;
+        padding: 0;
+        color: #FFFFFF;
+        transform: translate3d(0, 0, 0);      
+        position: relative;
+        left: 12px;
+          // top: 50%;
+          // margin-top: -16px;
+              // height: 34px;
+              // line-height: 33px;
+              // // padding: 0 $topbar-link-padding+rem-calc(25) 0 $topbar-link-padding;
+              // color: $topbar-menu-link-color;
+              // position: relative;        
+        span{
+          position: absolute;
+          top: 50%;
+          right: 0.3rem;
+          display: block;
+          width: 100%;
+          height: 4px;
+          margin-top: -2px;
+          background-color: #fff;
+          font-size: 0px;
+          -webkit-touch-callout: none;
+          -khtml-user-select: none;
+          user-select: none;
+          transition: background-color 0.3s;
+        }
+        // 
+        span:before,
+        span:after{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          content: '';
+          transition: transform 0.3s;
+        }
+        // Position icons horizontally
+        span:before { transform: translateY(-250%); }
+        span:after  { 
+          // Fix conflict with old hamburger-menu (line 328)
+          box-shadow: none !important; // I dare you remove this
+          transform: translateY(250%);  
+        }
+
+      }
+    }
+    // i-menu uses transforms the menu into a close icon
+
+// 
+.move-left .inner-wrap .tab-bar .right-small .right-off-canvas-toggle.i-menu,
+.move-right .inner-wrap .tab-bar .left-small .left-off-canvas-toggle.i-menu{
+  span    { background-color: transparent;      }
+  // Rotate top
+  span:before { transform: translateY(0) rotate(45deg);   }
+  // Rotate bottom
+  span:after  { transform: translateY(0) rotate(-45deg);  }
+}
+   
